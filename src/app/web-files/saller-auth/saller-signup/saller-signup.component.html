@@ -17,25 +17,24 @@
                            <input [class.is-valid]="phone.valid && phone.touched" [class.is-invalid]="phone.invalid && phone.touched" type="number" class="form-control" placeholder="Phone" required ngModel #phone="ngModel" name="phone">
                            <span *ngIf="phone.errors?.['required'] && phone.touched" class="error text-danger d-block">Email is required.</span>
                       </div>
-                       <!-- <div class="input-group flex-nowrap mt-3">
-                         <input type="text" class="form-control" placeholder="Email" ngModel name="email">
-                      </div> -->
-                      <!-- <div class="input-group mt-3">
-                         <input type="number" class="form-control" placeholder="Phone" ngModel name="phone">
-                      </div> -->
                         <div class="input-group eicon flex-nowrap mt-3">
-                         <input [type]="PasswordToggler ? 'text' : 'password' " class="form-control" placeholder="Password" ngModel name="password">
+                         <input [class.is-valid]="password.valid && password.touched" [class.is-invalid]="password.invalid && password.touched" [type]="PasswordToggler ? 'text' : 'password'" class="form-control" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" #password="ngModel" ngModel [(ngModel)]="matchPaswword.password" name="password">
                          <button (click)="PasseordToggle($event)" class="input-group-text"><i [ngClass]="PasswordToggler ? 'fa-eye-slash' : 'fa-eye'" class="fa "></i></button>
                       </div>
-                        <div class="input-group eicon flex-nowrap mt-3">
-                         <input [type]="ConfirmPasswordToggler ? 'text' : 'password' " class="form-control" placeholder="Confirm Password" ngModel name="cpassword">
+                      <span *ngIf="password.errors?.['required'] && password.touched" class="error text-danger d-block">Password is required.</span>
+                      <span *ngIf="password.errors?.['pattern'] && password.touched" class="error text-danger d-block">Enter strong password.</span>
+                       <div class="input-group eicon flex-nowrap mt-3">
+                         <input [class.is-valid]="cpassword.valid && cpassword.touched" [class.is-invalid]="cpassword.invalid && cpassword.touched" [type]="ConfirmPasswordToggler ? 'text' : 'password'" class="form-control" placeholder="Confirm Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" #cpassword="ngModel" ngModel [(ngModel)]="matchPaswword.cpassword" (ngModelChange)="checkPasswords()" name="cpassword">
                          <button (click)="ConfirmPasseordToggle($event)" class="input-group-text"><i [ngClass]="ConfirmPasswordToggler ? 'fa-eye-slash' : 'fa-eye'" class="fa "></i></button>
                       </div>
+                      <span *ngIf="cpassword.errors?.['required'] && cpassword.touched" class="error text-danger d-block">Confirm Password is required.</span>
+                      <span *ngIf="passwordMismatch  && cpassword.touched" class="error text-danger d-block">Passwords do not match.</span>
                       <div class="d-flex align-items-center justify-content-between form_links">
                         <a routerLink="/saller-forget" class="view_all_action text_dark d-block text-end">Forget Password</a>
                         <a routerLink="/saller" class="view_all_action text_dark d-block text-end">Already have an account Login Now</a>
                       </div>
-                      <button type="submit" class="btn btn_brand mt-4 w-100">Login</button>
+                       <div *ngIf="successMessage" class="alert alert-success mt-3 p-2 text-center">{{ successMessage }}</div>
+                      <button type="submit" class="btn btn_brand mt-4 w-100" [disabled]="SellerRegister.invalid || passwordMismatch">Sign up</button>
                   </form>
              </div>
          </div>

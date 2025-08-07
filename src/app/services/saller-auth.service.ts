@@ -10,8 +10,6 @@ export class SallerAuthService {
   constructor(public http: HttpClient, public session:SessionService) { }
 
   SallerRagisterBck(data: any){
-     return this.http.post<any>(this.session.baseurl+'SallerAuth', data).subscribe((res) => {
-       if(res){console.log(res)}
-     });
+     return this.http.post<any>(this.session.baseurl+'SallerAuth', data);
   }
 }
