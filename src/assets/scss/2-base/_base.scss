@@ -1,0 +1,92 @@
+
+/*--------------*\
+    Base
+\*--------------*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $main-font-family;
+  font-size: $body--main-font;
+  color: $body-main-color;
+  font-weight: $body-main-font-weight;
+  position: relative;
+}
+.primary_font{
+  font-size: $primary-font;
+}
+.secondrey_font{
+  font-size: $secondrey-font;
+}
+h1{
+  font-size: $size-1;
+  font-weight: 800;
+  @include grid-md-down {
+    font-size: 30px;
+  }
+}
+h2{
+  font-size: $size-2;
+  font-weight: 700;
+  @include grid-md-down {
+    font-size: 26px;
+  }
+}
+
+h3{
+  font-size: $size-3;
+  font-weight: 700;
+  @include grid-md-down {
+    font-size: 18px;
+  }
+}
+h4{
+  font-size: $size-4;
+  font-weight: 700;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin-bottom: 0;
+}
+.section{
+  padding: 40px 0;
+  @include grid-md-down {
+   padding: 30px 0;
+    }
+}
+.section_pt_40{
+  padding-top: 40px;
+  @include grid-md-down {
+    padding-top: 30px;
+     }
+}
+.section_pb_40{
+  padding-bottom: 40px;
+  @include grid-md-down {
+    padding-bottom: 30px;
+     }
+}
+
+.pb_40{
+  padding-bottom: 40px;
+  @include grid-md-down {
+    padding-bottom: 30px;
+     }
+}
+.pt_40{
+  padding-top: 40px;
+  @include grid-md-down {
+    padding-top: 30px;
+     }
+}
+.title_w_action{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  h5{
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

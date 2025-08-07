@@ -1,0 +1,227 @@
+   <div class="header_top">
+    <div class="container">
+       <div class="row">
+        <div class="col-6">
+            <div class="d-flex justify-content-between justify-content-lg-start mb-0">
+               <div class="dropdown transparent_dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Bangla</a></li>
+                  <li><a class="dropdown-item" href="#">Arabic</a></li>
+                </ul>
+              </div>
+              <div class="dropdown ms-3 transparent_dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  U.S. Dollar ($)
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item active " href="javascript:void(0)" data-currency="USD">U.S. Dollar ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="AUD">Australian Dollar ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="BRL">Brazilian Real (R$)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="CAD">Canadian Dollar ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="CZK">Czech Koruna (Kč)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="DKK">Danish Krone (kr)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="EUR">Euro (€)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="HKD">Hong Kong Dollar ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="HUF">Hungarian Forint (Ft)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="ILS">Israeli New Sheqel (₪)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="JPY">Japanese Yen (¥)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="MYR">Malaysian Ringgit (RM)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="MXN">Mexican Peso ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="NOK">Norwegian Krone (kr)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="NZD">New Zealand Dollar ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="PHP">Philippine Peso (₱)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="PLN">Polish Zloty (zł)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="GBP">Pound Sterling (£)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="RUB">Russian Ruble (руб)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="SGD">Singapore Dollar ($)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="SEK">Swedish Krona (kr)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="CHF">Swiss Franc (CHF)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="THB">Thai Baht (฿)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="BDT">Taka (৳)</a></li>
+                  <li><a class="dropdown-item " href="javascript:void(0)" data-currency="Rupee">Indian Rupee (Rs)</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="col-6">
+           <ul class="list-inline mb-0 h-100 d-flex justify-content-end align-items-center header_top_logins">
+             <li class="list-inline-item"><a class="light_gray fs_13 underline_none" href="">Become a Seller !</a></li>
+             <li class="list-inline-item"><a class="light_gray fs_13 underline_none" routerLink="saller">Login to Seller</a></li>
+          </ul>
+        </div>
+       </div>
+    </div>
+   </div>
+<header (scroll)="navFixed()" [ngClass]="navbarFixed?'fixed':'nofixed'">
+    <div class="header_center">
+       <div class="container">
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <a class="navbar-brand d-block py_20 me-3 ms-0" routerLink="home"> <img src="/assets/images/logo.svg" alt="header logo"> </a>
+          <div class="search_filter">
+              <form action="">
+                <input type="search" class="form-control" placeholder="I am a shopping for...">
+                <button type="submit" class="search_icon"><img src="../../../../assets/images/search-icon.svg" alt=""></button>
+              </form>
+          </div>
+          <div class="site_update">
+              <ul class="wislist">
+                <li><a href=""><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart d-none"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-bell"></i></a></li>
+              </ul>
+              <div class="d-none d-xl-block ml-auto mr-0">
+                  <span class="d-flex align-items-center nav-user-info ml-3">
+                      <span style="width: 40px; height: 40px;" class="rounded-circle overflow-hidden border d-flex align-items-center justify-content-center nav-user-img">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19.902" height="20.012" viewBox="0 0 19.902 20.012">
+                              <path id="fe2df171891038b33e9624c27e96e367" d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1.006,1.006,0,1,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1,10,10,0,0,0-6.25-8.19ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z" transform="translate(-2.064 -1.995)" fill="#91919b"></path>
+                          </svg>
+                      </span>
+                      <a href="" class="underline_none light_gray opacity-60 hov-opacity-100 hov-text-primary fs-13 d-inline-block border_right border-soft-light border-width-2 pe-2 ms-3">Login</a>
+                      <a href="" class="underline_none light_gray opacity-60 hov-opacity-100 hov-text-primary fs-13 d-inline-block pe-2 ms-3">Registration</a>
+                  </span>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+      <div class="header_main">
+        <nav class="navbar navbar-expand-lg bg_primary p-0">
+            <div class="container">
+                <!-- dropdown.component.html -->
+                <div class="header_dropdown">
+                  <button (click)="CategoryToggler()" class="category_dropdown_actoin">Categories <a href="" class="fw-normal text-white fs-12 underline_none">(See All)</a> <i class="fa-solid fa-angle-down"></i></button>
+                  <div [ngClass]="IsCategoryOpen?'IsOpen':'IsClosed'" class="category_dropdown_content">
+                     <app-categories-list></app-categories-list>
+                  </div>
+                </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MobileViewTogger" aria-controls="MobileViewTogger">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="MobileViewTogger">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link active" routerLink="">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">Flash</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">Sale</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">Blogs</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">All Brands</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">All categories</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">All Sellers</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">Coupons</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">Todays</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="">Deal</a></li>
+                </ul>
+                <div class="header_dropdown d-lg-block d-none">
+                  <button (click)="cartDropdown()" class="category_dropdown_actoin cart_dropdown_actoin"><i class="fa-solid fa-cart-shopping me-2"></i> $0.00 <span class="fw-normal text-white fs-12 underline_none ms-3">(0 items)</span></button>
+                  <div [ngClass]="IsCartOpen?'IsOpen':'IsClosed'" class="cart_dropdown_content category_dropdown_content">
+                     <div class="cart_empty">
+                      <span><i class="fa-solid fa-face-frown"></i></span>
+                        <h5>Your Cart Is Empty</h5>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+     </div>
+</header>
+
+
+
+<div class="floating-buttons-section">
+    <a class="floating-buttons-section-control d-lg-none" onclick="showFloatingButtons()">
+        <i class="las la-2x la-angle-double-right"></i>
+    </a>
+    <!-- All Categories -->
+    <div class="aiz-floating-button">
+        <a href="">
+            <span class="circle">
+                <span class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                        <g id="Group_29240" data-name="Group 29240" transform="translate(-18 -18)">
+                          <rect id="Rectangle_21398" data-name="Rectangle 21398" width="15" height="2" transform="translate(18 24)" fill="#fff"></rect>
+                          <rect id="Rectangle_21399" data-name="Rectangle 21399" width="15" height="2" transform="translate(18 18)" fill="#fff"></rect>
+                          <rect id="Rectangle_21400" data-name="Rectangle 21400" width="15" height="2" transform="translate(18 30)" fill="#fff"></rect>
+                        </g>
+                    </svg>
+                </span>
+            </span>
+            <span class="text">
+                <span class="w-120px mr-3">All categories</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="7.073" height="12" viewBox="0 0 7.073 12">
+                    <path id="Path_41557" data-name="Path 41557" d="M12.913,3.173,11.834,2.1,5.84,8.1l6,6,1.073-1.073L7.985,8.1Z" transform="translate(12.913 14.1) rotate(180)" fill="#fff"></path>
+                </svg>
+            </span>
+        </a>
+    </div>
+    <!-- Flash Sale -->
+    <div class="aiz-floating-button">
+        <a href="">
+            <span class="circle">
+                <span class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13.333" height="20" viewBox="0 0 13.333 20">
+                        <path id="Path_41551" data-name="Path 41551" d="M28.294,12.246a.4.4,0,0,0-.353-.209H23.855l3.264-6.508a.352.352,0,0,0-.023-.357A.4.4,0,0,0,26.765,5H20.49a.394.394,0,0,0-.358.219l-5.1,10.741a.353.353,0,0,0,.029.353.4.4,0,0,0,.329.169h3.827l-1.857,8.069a.365.365,0,0,0,.216.414.407.407,0,0,0,.476-.106l10.2-12.222a.354.354,0,0,0,.045-.391Z" transform="translate(-15 -5)" fill="#fff"></path>
+                      </svg>
+                </span>
+            </span>
+            <span class="text">
+                <span class="w-120px mr-3">Flash Sale</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="7.073" height="12" viewBox="0 0 7.073 12">
+                    <path id="Path_41557" data-name="Path 41557" d="M12.913,3.173,11.834,2.1,5.84,8.1l6,6,1.073-1.073L7.985,8.1Z" transform="translate(12.913 14.1) rotate(180)" fill="#fff"></path>
+                </svg>
+            </span>
+        </a>
+    </div>
+    <!-- Today's Deal -->
+    <div class="aiz-floating-button">
+        <a href="">
+            <span class="circle">
+                <span class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g id="a47ac3ccd1557f7fbdb769f1c535b2b9" transform="translate(0 0)">
+                          <path id="Path_41552" data-name="Path 41552" d="M10,0A10,10,0,1,0,20,10,10,10,0,0,0,10,0Zm0,18.333A8.333,8.333,0,1,1,18.333,10,8.333,8.333,0,0,1,10,18.333Z" fill="#fff"></path>
+                          <path id="Path_41553" data-name="Path 41553" d="M17.515,14.143,13,11.434V6a1,1,0,0,0-2,0v6a1.075,1.075,0,0,0,.485.857l5,3a1,1,0,1,0,1.03-1.714Z" transform="translate(-2.588 -1.538)" fill="#fff"></path>
+                        </g>
+                    </svg>
+                </span>
+            </span>
+            <span class="text">
+                <span class="w-120px mr-3">Todays Deal</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="7.073" height="12" viewBox="0 0 7.073 12">
+                    <path id="Path_41557" data-name="Path 41557" d="M12.913,3.173,11.834,2.1,5.84,8.1l6,6,1.073-1.073L7.985,8.1Z" transform="translate(12.913 14.1) rotate(180)" fill="#fff"></path>
+                </svg>
+            </span>
+        </a>
+    </div>
+        <!-- Auction -->
+    <div class="aiz-floating-button">
+        <a href="">
+            <span class="circle">
+                <span class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.627" height="20" viewBox="0 0 19.627 20">
+                        <g id="cb3bc0b728579e634f654dfaf5995832" transform="translate(-8 -7.122)">
+                          <rect id="Rectangle_21402" data-name="Rectangle 21402" width="2.455" height="5.729" rx="1.228" transform="translate(10.102 16.386) rotate(-45)" fill="#fff"></rect>
+                          <rect id="Rectangle_21403" data-name="Rectangle 21403" width="2.455" height="5.729" rx="1.228" transform="translate(17.623 8.858) rotate(-45)" fill="#fff"></rect>
+                          <rect id="Rectangle_21404" data-name="Rectangle 21404" width="4.91" height="6.547" rx="2" transform="translate(12.702 13.203) rotate(-45)" fill="#fff"></rect>
+                          <rect id="Rectangle_21405" data-name="Rectangle 21405" width="1.637" height="4.092" transform="translate(12.414 15.225) rotate(-45)" fill="#fff"></rect>
+                          <rect id="Rectangle_21406" data-name="Rectangle 21406" width="1.637" height="4.092" transform="translate(17.043 10.599) rotate(-45)" fill="#fff"></rect>
+                          <path id="Path_41554" data-name="Path 41554" d="M21.721,14.563l.577.577L21.14,16.3l-.577-.577a.819.819,0,1,1,1.158-1.158Z" transform="translate(-7.281 -4.255)" fill="#fff"></path>
+                          <rect id="Rectangle_21407" data-name="Rectangle 21407" width="1.637" height="4.501" transform="translate(18.489 16.673) rotate(-45)" fill="#fff"></rect>
+                          <path id="Path_41555" data-name="Path 41555" d="M41.235,36.393l1.158-1.158a.409.409,0,0,1,.581,0L46.833,39.1a1.228,1.228,0,0,1,0,1.735h0a1.228,1.228,0,0,1-1.735,0l-3.863-3.859a.409.409,0,0,1,0-.581Z" transform="translate(-19.564 -16.538)" fill="#fff"></path>
+                          <rect id="Rectangle_21408" data-name="Rectangle 21408" width="12.276" height="1.637" transform="translate(8 25.485)" fill="#fff"></rect>
+                          <path id="Path_41556" data-name="Path 41556" d="M11.637,48H19a1.637,1.637,0,0,1,1.637,1.637H10A1.637,1.637,0,0,1,11.637,48Z" transform="translate(-1.182 -24.151)" fill="#fff"></path>
+                        </g>
+                    </svg>
+                </span>
+            </span>
+            <span class="text">
+                <span class="w-120px mr-3">Auction</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="7.073" height="12" viewBox="0 0 7.073 12">
+                    <path id="Path_41557" data-name="Path 41557" d="M12.913,3.173,11.834,2.1,5.84,8.1l6,6,1.073-1.073L7.985,8.1Z" transform="translate(12.913 14.1) rotate(180)" fill="#fff"></path>
+                </svg>
+            </span>
+        </a>
+    </div>
+    </div>

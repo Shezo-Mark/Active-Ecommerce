@@ -1,0 +1,84 @@
+{
+  "SallerAuth": [
+    {
+      "id": "79a3",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "27a5",
+      "name": "faf",
+      "email": "shehzadamin697@gmail.com",
+      "phone": 32432,
+      "password": "dfdsf",
+      "cpassword": "dsfdsfds"
+    },
+    {
+      "id": "f4ea",
+      "name": "ds",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "553f",
+      "name": "sd",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "bd8f",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "6493",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "d4e3",
+      "name": "sad",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "b692",
+      "name": "d",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "9628",
+      "name": "",
+      "email": "sdsad",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    },
+    {
+      "id": "85ec",
+      "name": "",
+      "email": "sdsad",
+      "phone": "",
+      "password": "",
+      "cpassword": ""
+    }
+  ]
+}

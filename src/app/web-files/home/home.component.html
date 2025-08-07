@@ -1,0 +1,126 @@
+<section class="section_banner">
+   <div class="container">
+        <div class="banner_main">
+           <app-categories-list></app-categories-list>
+          <div class="banner_slider">
+              <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let slide of slides">
+                  <img [src]="slide.image" alt="Slide Image">
+                </ng-template>
+              </owl-carousel-o>
+          </div>
+        </div>
+   </div>
+</section>
+<section class="section_today_deals mt-4">
+    <div class="container">
+         <div class="today_deals_main">
+            <img src="../../../assets/images/today-deals.webp" alt="" class="img-fluid">
+          <div class="today_deals_slider">
+            <a class="view_all_action text_dark d-block ms-auto tp-m-20" href="">View All</a>
+              <owl-carousel-o [options]="TodayDealsOptions">
+                <ng-template carouselSlide *ngFor="let dealSlide of TodayDeals">
+                   <div class="today_deals_content">
+                        <a href="">
+                           <img [src]="dealSlide.image" alt="Slide Image">
+                       <h6>$21.00</h6>
+                       <h5>$40.00</h5>
+                        </a>
+                   </div>
+                </ng-template>
+              </owl-carousel-o>
+          </div>
+         </div>
+    </div>
+</section>
+
+<section class="section featured_categories">
+    <div class="container">
+         <div class="title_w_action">
+            <h5>Featured Categories</h5>
+            <a class="view_all_action text_dark d-block text-end" href="">View All Categories</a>
+         </div>
+          <div class="cat_box_list">
+            <div class="cat_box">
+              <div class="cat_img"><img src="../../../assets/images/cat-1.webp" alt=""></div>
+              <div class="cat_details">
+                <h3>New Arrivals</h3>
+                <ul class="cat_list">
+                    <li><a href="">Sofas</a></li>
+                    <li><a href="">Cabinets & Chests</a></li>
+                    <li><a href="">Console Tables</a></li>
+                    <li><a href="">Futons & Daybeds</a></li>
+                    <li><a href="">Makeup Table and Vanities</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="cat_box">
+              <div class="cat_img"><img src="../../../assets/images/cat-2.webp" alt=""></div>
+              <div class="cat_details">
+                <h3>Living Room</h3>
+                <ul class="cat_list">
+                    <li><a href="">Sectional Sofas & Couches</a></li>
+                    <li><a href="">Chairs & Seating</a></li>
+                    <li><a href="">Living Room Sets</a></li>
+                    <li><a href="">Bookcases</a></li>
+                    <li><a href="">Loveseats</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="cat_box">
+              <div class="cat_img"><img src="../../../assets/images/cat-3.webp" alt=""></div>
+              <div class="cat_details">
+                <h3>Bedroom</h3>
+                <ul class="cat_list">
+                    <li><a href="">Beds & Headboards</a></li>
+                    <li><a href="">Dressers & Chests</a></li>
+                    <li><a href="">Nightstands</a></li>
+                    <li><a href="">Jewelry Armoires</a></li>
+                </ul>
+              </div>
+            </div>
+             <div class="cat_box">
+              <div class="cat_img"><img src="../../../assets/images/cat-4.webp" alt=""></div>
+              <div class="cat_details">
+                <h3>Kitchen</h3>
+                <ul class="cat_list">
+                    <li><a href="">Sinks and kitchen taps</a></li>
+                    <li><a href="">Kitchen rugs</a></li>
+                    <li><a href="">Pot Holders</a></li>
+                    <li><a href="">Napkins</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="cat_box">
+              <div class="cat_img"><img src="../../../assets/images/cat-5.webp" alt=""></div>
+              <div class="cat_details">
+                <h3>Dining</h3>
+                 <ul class="cat_list">
+                    <li><a href="">Dining Tables & Seating</a></li>
+                    <li><a href="">Dining Benches</a></li>
+                    <li><a href="">Tablecloths</a></li>
+                    <li><a href="">Placemats</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="cat_box">
+              <div class="cat_img"><img src="../../../assets/images/cat-6.webp" alt=""></div>
+              <div class="cat_details">
+                <h3>Office</h3>
+                <ul class="cat_list">
+                    <li><a href="">Desks</a></li>
+                    <li><a href="">Office Chairs</a></li>
+                    <li><a href="">Bookcases</a></li>
+                    <li><a href="">Filing Cabinets</a></li>
+                    <li><a href="">Laptop Carts & Stands</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           <div class="cat_images">
+              <a href="#" class="cat_img_item"><img src="../../../assets/images/cat-image-1.webp" alt=""></a>
+              <a href="#" class="cat_img_item"><img src="../../../assets/images/cat-image-2.webp" alt=""></a>
+              <a href="#" class="cat_img_item"><img src="../../../assets/images/cat-image-3.webp" alt=""></a>
+          </div>
+    </div>
+</section>

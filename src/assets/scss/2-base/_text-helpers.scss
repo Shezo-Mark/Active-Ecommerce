@@ -1,0 +1,69 @@
+/*--------------*\
+    text-helpers
+\*--------------*/
+
+
+
+.text_underline{
+  text-decoration: underline !important;
+}
+.underline_none{
+  text-decoration: none !important;
+}
+.text_black {
+  color: #000 !important;
+}
+
+
+.text_gray_dark {
+    color: #8d8d8d !important;
+}
+.text-dark,
+.hov-text-dark:hover {
+    color: #292933 !important;
+}
+.bg_light,
+.hov_bg_light:hover {
+    background-color: #f5f5f5 !important;
+}
+.border_bottom {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+.border_top {
+    border-top: 1px solid #dee2e6 !important;
+}
+.border_right {
+    border-right: 1px solid #dee2e6 !important;
+}
+.light_gray{
+  color: #919199 !important;;
+}
+.text_primary,
+.hov_text_primary:hover {
+    color: #baa185 !important;
+}
+a:hover {
+    text-decoration: none;
+    color: #baa185 !important;
+}
+.py_20{
+  padding: 20px 0 !important;
+}
+.fs-13{
+  font-size: 13px;
+}
+.fs-12 {
+    font-size: 12px !important;
+}
+.border-width-2 {
+    border-width: 2px !important;
+}
+.border-soft-light {
+    border-color: #dfdfe6 !important;
+}
+.opacity-60, .hov-opacity-60:hover {
+    opacity: 0.6 !important;
+}
+.opacity-100, .hov-opacity-100:hover {
+    opacity: 1 !important;
+}

@@ -1,0 +1,53 @@
+//  .gradient_box{
+//     height: 100%;
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: center;
+//     align-items: center;
+//     @include grid-md-down{
+//         padding: 30px 0;
+//     }
+
+// }
+.screen_box{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    // justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 40px;
+    position: relative;
+    @include grid-md-down{
+        padding: 14px;
+    }
+    h1{
+        color: white;
+        margin-bottom: 20px;
+        @include grid-md-down{
+            font-size: 60px !important;
+        }
+    }
+    p{
+        color: white;
+        margin-bottom: 20px;
+    }
+    @include grid-md-down{
+       height: auto;
+    }
+    // .welcome_action{
+    //     position: absolute;
+    //     bottom: 40px;
+    //     right: 40px;
+    //     button{
+    //         margin-left: auto;
+    //     }
+    // }
+}
+.user_box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

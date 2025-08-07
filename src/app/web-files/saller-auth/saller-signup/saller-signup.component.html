@@ -1,0 +1,43 @@
+<section class="section_saller section h_calc">
+     <div class="container" style="max-width: 600px;">
+         <div class="row">
+             <div class="saller_form">
+                  <form action="" #SellerRegister="ngForm" (ngSubmit)="SallerSignUp(SellerRegister)">
+                        <div class="input-group flex-column">
+                           <input [class.is-valid]="name.valid && name.touched" [class.is-invalid]="name.invalid && name.touched" type="text" class="form-control" placeholder="Name" required minlength="4" ngModel #name="ngModel" name="name">
+                           <span *ngIf="name.errors?.['required'] && name.touched" class="error text-danger d-block">Name is required.</span>
+                           <span *ngIf="name.errors?.['minlength'] && name.touched" class="error text-danger d-block">Enter at least 4 characters</span>
+                      </div>
+                         <div class="input-group flex-column mt-3">
+                           <input [class.is-valid]="email.valid && email.touched" [class.is-invalid]="email.invalid && email.touched" type="email" class="form-control" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel #email="ngModel" name="email">
+                           <span *ngIf="email.errors?.['required'] && email.touched" class="error text-danger d-block">Email is required.</span>
+                           <span *ngIf="email.errors?.['pattern'] && email.touched" class="error text-danger d-block">Enter correct email</span>
+                      </div>
+                        <div class="input-group flex-column mt-3">
+                           <input [class.is-valid]="phone.valid && phone.touched" [class.is-invalid]="phone.invalid && phone.touched" type="number" class="form-control" placeholder="Phone" required ngModel #phone="ngModel" name="phone">
+                           <span *ngIf="phone.errors?.['required'] && phone.touched" class="error text-danger d-block">Email is required.</span>
+                      </div>
+                       <!-- <div class="input-group flex-nowrap mt-3">
+                         <input type="text" class="form-control" placeholder="Email" ngModel name="email">
+                      </div> -->
+                      <!-- <div class="input-group mt-3">
+                         <input type="number" class="form-control" placeholder="Phone" ngModel name="phone">
+                      </div> -->
+                        <div class="input-group eicon flex-nowrap mt-3">
+                         <input [type]="PasswordToggler ? 'text' : 'password' " class="form-control" placeholder="Password" ngModel name="password">
+                         <button (click)="PasseordToggle($event)" class="input-group-text"><i [ngClass]="PasswordToggler ? 'fa-eye-slash' : 'fa-eye'" class="fa "></i></button>
+                      </div>
+                        <div class="input-group eicon flex-nowrap mt-3">
+                         <input [type]="ConfirmPasswordToggler ? 'text' : 'password' " class="form-control" placeholder="Confirm Password" ngModel name="cpassword">
+                         <button (click)="ConfirmPasseordToggle($event)" class="input-group-text"><i [ngClass]="ConfirmPasswordToggler ? 'fa-eye-slash' : 'fa-eye'" class="fa "></i></button>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between form_links">
+                        <a routerLink="/saller-forget" class="view_all_action text_dark d-block text-end">Forget Password</a>
+                        <a routerLink="/saller" class="view_all_action text_dark d-block text-end">Already have an account Login Now</a>
+                      </div>
+                      <button type="submit" class="btn btn_brand mt-4 w-100">Login</button>
+                  </form>
+             </div>
+         </div>
+     </div>
+</section>

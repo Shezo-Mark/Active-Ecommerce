@@ -1,0 +1,30 @@
+/*--------------*\
+    Boxes Section
+\*--------------*/
+.box{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    &.calc-100vh-94{
+        height: calc(100vh - 94px) !important;
+    }
+    .calc-100vh-142{
+        height: calc(100vh - 142px) !important;
+    }
+    .calc-100vh-142{
+        height: calc(100vh - 136px) !important;
+    }
+    &.calc-100vh-200{
+        height: calc(100vh - 200px) !important;
+    }
+    .calc-100vh-235{
+        height: calc(100vh - 235px) !important;
+    }
+}
+.box-shadow-none{
+    box-shadow: none !important;
+}
+.box-shadow{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+.overflowY{
+    overflow-y: auto;
+}
