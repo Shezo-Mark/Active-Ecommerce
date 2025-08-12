@@ -13,11 +13,13 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'index', component: HomeComponent },
-      { path: 'saller-forget', component: SallerForgetComponent },
-      { path: 'set-pin', component: SallerSetNewPinComponent },
       {
         path: 'saller',
         loadChildren: () => import("../web-files/saller-auth/saller-auth.module").then(m => m.SallerAuthModule)
+      },
+       {
+        path: 'user',
+        loadChildren: () => import("../web-files/user-auth/user-auth.module").then(m => m.UserAuthModule)
       }
     ]
   }

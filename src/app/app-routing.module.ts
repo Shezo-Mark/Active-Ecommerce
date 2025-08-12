@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./web-files/web-files.module').then(m => m.WebFilesModule)
   },
   {
+     path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
     path:'**',
 component: NotFoundComponent
   }

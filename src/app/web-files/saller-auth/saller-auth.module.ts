@@ -7,7 +7,7 @@ import { SallerLoginComponent } from './saller-login/saller-login.component';
 import { SallerSignupComponent } from './saller-signup/saller-signup.component';
 import { SallerForgetComponent } from './saller-forget/saller-forget.component';
 import { SallerSetNewPinComponent } from './saller-set-new-pin/saller-set-new-pin.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     SallerAuthRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SallerAuthModule { }

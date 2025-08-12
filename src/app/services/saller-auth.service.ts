@@ -12,4 +12,14 @@ export class SallerAuthService {
   SallerRagisterBck(data: any){
      return this.http.post<any>(this.session.baseurl+'SallerAuth', data);
   }
+    SallerLoginBck(data: any){
+    return this.http.get<any>(this.session.baseurl+'SallerAuth?email='+data.email+'&password='+data.password);
+  }
+    SallerForgetBck(data: any){
+    return this.http.get<any>(this.session.baseurl+'SallerAuth?email='+data.email);
+  }
+SallerSetPinBck(userId: string, data: any) {
+  debugger
+  return this.http.patch(this.session.baseurl+'SallerAuth/' + userId, data);
+}
 }

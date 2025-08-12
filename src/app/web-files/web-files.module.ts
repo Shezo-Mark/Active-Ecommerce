@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesListComponent } from './shared/categories-list/categories-list.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CategoriesListComponent } from './shared/categories-list/categories-lis
     CommonModule,
     WebFilesRoutingModule,
     CarouselModule,
+    FormsModule
   ]
 })
 export class WebFilesModule { }

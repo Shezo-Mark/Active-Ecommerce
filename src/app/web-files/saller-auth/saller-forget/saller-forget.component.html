@@ -2,15 +2,18 @@
      <div class="container" style="max-width: 600px;">
          <div class="row">
              <div class="saller_form">
-                  <form action="">
-                       <div class="input-group">
-                         <input type="text" class="form-control" placeholder="Enter your Email">
-                      </div>
+                  <form action="" #SellerForget="ngForm" (ngSubmit)="SallerForget(SellerForget)">
+                       <div class="input-group flex-column">
+                         <input [class.is-valid]="email.valid && email.touched" [class.is-invalid]="email.invalid && email.touched" type="email" class="form-control" placeholder="Enter your Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel name="email" #email="ngModel">
+                          <span *ngIf="email.errors?.['required'] && email.touched" class="error text-danger d-block">Email is required.</span>
+                          <span *ngIf="email.errors?.['pattern'] && email.touched" class="error text-danger d-block">Enter correct email.</span>
+                        </div>
                       <div class="d-flex align-items-center justify-content-between form_links">
                         <a routerLink="/saller" class="view_all_action text_dark d-block text-end">Don't Want to Reset Login Now</a>
                       </div>
-                      <!-- <button routerLink="/set-pin" class="btn btn_brand mt-4 w-100">Request Now</button> -->
-                      <a routerLink="/set-pin" class="btn btn_brand mt-4 w-100">Request Now</a>
+                        <div *ngIf="errorMessage" class="alert alert-danger mt-3 p-2 text-center">{{ errorMessage }}</div>
+                      <button type="submit" class="btn btn_brand mt-4 w-100">Request Now</button>
+                      <!-- <a routerLink="/set-pin" class="btn btn_brand mt-4 w-100">Request Now</a> -->
                   </form>
              </div>
          </div>
