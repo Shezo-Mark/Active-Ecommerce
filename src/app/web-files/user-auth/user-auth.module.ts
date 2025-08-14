@@ -7,6 +7,7 @@ import { UserForgetComponent } from './user-forget/user-forget.component';
 import { UserNewPinComponent } from './user-new-pin/user-new-pin.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
   ],
   imports: [
     CommonModule,
-    UserAuthRoutingModule
+    UserAuthRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class UserAuthModule { }
