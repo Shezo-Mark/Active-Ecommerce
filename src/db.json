@@ -57,6 +57,14 @@
       "phone": 3004759697,
       "password": "123456",
       "confirmPassword": "123456"
+    },
+    {
+      "id": "0b37",
+      "name": "Shehzad Amin",
+      "email": "shehzadamin697@gmail.com",
+      "phone": 3004759697,
+      "password": "123456",
+      "confirmPassword": "123456"
     }
   ]
 }

@@ -34,7 +34,11 @@ export class UserSignupComponent {
     }
     UserRagisterForm(){
     if(this.UserRagister.invalid || this.passwordMismatch){
-       console.log('Form Invalid')
+       console.log('Form Invalid');
+            this.ErrorMessage = 'Form Submit Faild';
+        setTimeout(() => {
+          this.ErrorMessage=  '';
+        }, 1000);
        this.UserRagister.markAllAsTouched();
        return
     }else{
