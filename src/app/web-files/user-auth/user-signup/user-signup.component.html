@@ -2,28 +2,71 @@
      <div class="container" style="max-width: 600px;">
          <div class="row">
              <div class="user_form">
-                  <form action="" [formGroup]="UserRagister" (ngSubmit)="UserRagisterForm(UserRagister)">
+                  <form action="" [formGroup]="UserRagister" (ngSubmit)="UserRagisterForm()">
                         <div class="input-group flex-column">
-                           <input type="text" class="form-control" placeholder="Name">
+                           <input type="text" class="form-control" placeholder="Name" formControlName="name" [ngClass]="{
+                            'is-invalid': UserRagister.get('name')?.invalid && UserRagister.get('name')?.touched,
+                            'is-valid': UserRagister.get('name')?.valid && UserRagister.get('name')?.touched
+                           }">
+                            <small *ngIf="UserRagister.get('name')?.invalid && UserRagister.get('name')?.touched" class="text-danger">
+                            Name is required (min 2 chars)
+                          </small>
                       </div>
                          <div class="input-group flex-column mt-3">
-                           <input type="email" class="form-control" placeholder="Email">
+                           <input type="email" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{
+                            'is-invalid': UserRagister.get('email')?.invalid && UserRagister.get('email')?.touched,
+                            'is-valid': UserRagister.get('email')?.valid && UserRagister.get('email')?.touched
+                           }">
+                           <small *ngIf="UserRagister.get('email')?.errors?.['required'] && UserRagister.get('email')?.touched" class="text-danger">
+                            Email is required
+                          </small>
+                           <small *ngIf="UserRagister.get('email')?.errors?.['email'] && UserRagister.get('email')?.touched" class="text-danger">
+                            Enter a correct email
+                          </small>
                       </div>
                         <div class="input-group flex-column mt-3">
-                           <input type="number" class="form-control" placeholder="Phone">
+                           <input type="number" class="form-control" placeholder="Phone" formControlName="phone" [ngClass]="{
+                            'is-invalid': UserRagister.get('phone')?.invalid && UserRagister.get('phone')?.touched,
+                            'is-valid': UserRagister.get('phone')?.valid && UserRagister.get('phone')?.touched
+                           }">
+                           <small *ngIf="UserRagister.get('phone')?.errors?.['required'] && UserRagister.get('phone')?.touched" class="text-danger">
+                            Phone is required
+                          </small>
+                           <small *ngIf="UserRagister.get('phone')?.errors?.['pattern'] && UserRagister.get('phone')?.touched" class="text-danger">
+                            Enter a correct Phone
+                          </small>
+
                       </div>
                         <div class="input-group eicon flex-nowrap mt-3">
-                         <input class="form-control" placeholder="Password">
-                         <button class="input-group-text"><i class="fa "></i></button>
+                         <input [type]="!showpassword? 'password': 'text'" class="form-control" placeholder="Password" formControlName="password" [ngClass]="{
+                            'is-invalid': UserRagister.get('password')?.invalid && UserRagister.get('password')?.touched,
+                            'is-valid': UserRagister.get('password')?.valid && UserRagister.get('password')?.touched
+                           }">
+                         <button (click)="PasswordToggler()" type="button" class="input-group-text"><i class="fa" [ngClass]="!showpassword? 'fa-eye':'fa-eye-slash'"></i></button>
                       </div>
+                        <small *ngIf="UserRagister.get('password')?.errors?.['required'] && UserRagister.get('password')?.touched" class="text-danger">
+                            Password is required
+                          </small>
                        <div class="input-group eicon flex-nowrap mt-3">
-                         <input class="form-control" placeholder="Confirm Password">
-                         <button  class="input-group-text"><i class="fa "></i></button>
+                         <input [type]="!confirmshowpassword? 'password': 'text'" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword"  [ngClass]="{
+                            'is-invalid': (UserRagister.get('confirmPassword')?.invalid && UserRagister.get('confirmPassword')?.touched) || (passwordMismatch && !UserRagister.get('confirmPassword')?.hasError('required')),
+                            'is-valid': UserRagister.get('confirmPassword')?.valid && UserRagister.get('confirmPassword')?.touched && !passwordMismatch
+                          }">
+                         <button (click)="ConfirmPasswordToggler()" type="button" class="input-group-text"><i class="fa" [ngClass]="!confirmshowpassword? 'fa-eye':'fa-eye-slash'"></i></button>
                       </div>
+                      <small *ngIf="UserRagister.get('confirmPassword')?.hasError('required') && (UserRagister.get('confirmPassword')?.touched || UserRagister.get('confirmPassword')?.dirty)" class="text-danger">
+                        Confirm Password is required
+                      </small>
+
+                      <small *ngIf="passwordMismatch && !UserRagister.get('confirmPassword')?.hasError('required') && (UserRagister.get('confirmPassword')?.touched || UserRagister.get('confirmPassword')?.dirty)" class="text-danger">
+                        Password and Confirm Password do not match.
+                      </small>
                       <div class="d-flex align-items-center justify-content-between form_links">
                         <a routerLink="/user/user-forget" class="view_all_action text_dark d-block text-end">Forget Password</a>
                         <a routerLink="/user" class="view_all_action text_dark d-block text-end">Already have an account Login Now</a>
                       </div>
+                        <div *ngIf="SuccessMessage" class="alert alert-success mt-3 p-2 text-center">{{ SuccessMessage }}</div>
+                        <div *ngIf="ErrorMessage" class="alert alert-danger mt-3 p-2 text-center">{{ ErrorMessage }}</div>
                       <button type="submit" class="btn btn_brand mt-4 w-100">Sign up</button>
                   </form>
              </div>
