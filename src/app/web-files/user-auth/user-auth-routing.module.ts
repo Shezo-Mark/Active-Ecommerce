@@ -14,7 +14,7 @@ const routes: Routes = [
         { path: '', component: UserLoginComponent },
         { path: 'sign-up', component: UserSignupComponent },
         { path: 'user-forget', component: UserForgetComponent },
-        { path: 'set-pin', component: UserNewPinComponent },
+        { path: 'set-pin/:id', component: UserNewPinComponent },
     ]
 }
 ];
