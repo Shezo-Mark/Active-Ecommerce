@@ -432,3 +432,40 @@
 // .radio input:checked~.checkmark:after {
 //     display: block;
 // }
+.form{
+  .form-group{
+    margin-bottom: 10px;
+  }
+  input{
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 5px  !important;
+  }
+  .eicon{
+     input{
+      border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+     }
+  }
+  .error{
+    font-size: 12px;
+  }
+  .form_links{
+    margin-top: 6px;
+    a{
+      // display: block;
+      // text-decoration: none;
+      // font-weight: 700;
+      font-size: 11px;
+      // color: #000;
+    }
+  }
+}
+.h_calc{
+  height: calc(100vh - 216px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
   styleUrl: './admin.component.scss'
 })
 export class AdminComponent {
-  constructor(public router:Router){}
-Logout(): void{
-  localStorage.removeItem('userData');
-  this.router.navigate(['/saller']);
-}
+  email='';
+  constructor(public router:Router){
+    if(localStorage.getItem('userData')){
+      let userData=JSON.parse(localStorage.getItem('userData')??'');
+      this.email=userData.email;
+    }
+
+  }
 }

@@ -1,0 +1,48 @@
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 30px 10px 0;
+            background: #baa185;
+            button{
+                padding: 3px 10px;
+                background: #baa185;
+                border-radius: 4px;
+                border: 1px solid gray;
+                transition: .2s;
+                &.is_active{
+                    margin-left: 10px;
+                    i{
+                        transition: .2s;
+                        transform: rotate(180deg);
+                    }
+                }
+                i{
+                    color: #c2c2c2;
+                }
+            }
+            .dropdown{
+                button{
+                    background-color: transparent;
+                    padding: 0;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    padding: 0 20px 0 0 ;
+                    img{
+                        width: 50px;
+                        height: 40px;
+                        object-fit: cover;
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                .dropdown-menu {
+                    width: 100%;
+                    border: none;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+            }
+        }

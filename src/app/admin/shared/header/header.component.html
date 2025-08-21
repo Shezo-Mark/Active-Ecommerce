@@ -1,1 +1,12 @@
-<p>header works!</p>
+       <header>
+                <button id="Togger_Aside"><i class="text-white fa-solid fa-angle-left"></i></button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                       <img src="../assets/images/pic.webp" alt=""> {{SallerName}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="admin-profile.html">Profile</a></li>
+                      <li><a class="dropdown-item" type="button" (click)="Logout()">Log Out</a></li>
+                    </ul>
+                  </div>
+            </header>

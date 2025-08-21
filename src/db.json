@@ -2,11 +2,19 @@
   "SallerAuth": [
     {
       "id": "b3a5",
-      "name": "dsds",
+      "name": "Shehzad Amin",
       "email": "shehzadamin697@gmail.com",
       "phone": 322432,
       "password": "Password1!",
       "cpassword": "Password1!"
+    },
+    {
+      "id": "767a",
+      "name": "Mubashor",
+      "email": "mubashir@gmail.com",
+      "phone": 24332443434,
+      "password": "Password@1",
+      "cpassword": "Password@1"
     }
   ],
   "UserAuth": [

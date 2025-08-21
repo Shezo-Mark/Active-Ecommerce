@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FotterComponent } from './shared/fotter/fotter.component';
 import { AsideComponent } from './shared/aside/aside.component';
+import { ProdustsComponent } from './produsts/produsts.component';
+import { AddProductsComponent } from './add-products/add-products.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { AsideComponent } from './shared/aside/aside.component';
     HomeComponent,
     HeaderComponent,
     FotterComponent,
-    AsideComponent
+    AsideComponent,
+    ProdustsComponent,
+    AddProductsComponent
   ],
   imports: [
     CommonModule,

@@ -102,16 +102,16 @@
               </button>
               <div class="collapse navbar-collapse" id="MobileViewTogger">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link active" routerLink="">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">Flash</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">Sale</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">Blogs</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">All Brands</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">All categories</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">All Sellers</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">Coupons</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">Todays</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="">Deal</a></li>
+                  <li *ngFor="let item of navItems" class="nav-item"><a class="nav-link active" [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ item.name }}</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" routerLink="">Flash</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">Sale</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">All Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">All categories</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">All Sellers</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">Coupons</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">Todays</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="">Deal</a></li> -->
                 </ul>
                 <div class="header_dropdown d-lg-block d-none">
                   <button (click)="cartDropdown()" class="category_dropdown_actoin cart_dropdown_actoin"><i class="fa-solid fa-cart-shopping me-2"></i> $0.00 <span class="fw-normal text-white fs-12 underline_none ms-3">(0 items)</span></button>

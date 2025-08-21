@@ -34,4 +34,16 @@ export class HeaderComponent {
   cartDropdown(){
      this.IsCartOpen = !this.IsCartOpen;
   }
+    navItems = [
+    { name: 'Home', route: '/' },
+    { name: 'Flash', route: '/flash' },
+    { name: 'Sale', route: '/sale' },
+    { name: 'Blogs', route: '/blogs' },
+    { name: 'All Brands', route: '/brands' },
+    { name: 'All Categories', route: '/categories' },
+    { name: 'All Sellers', route: '/sellers' },
+    { name: 'Coupons', route: '/coupons' },
+    { name: 'Today\'s', route: '/todays' },
+    { name: 'Deal', route: '/deal' }
+  ];
 }

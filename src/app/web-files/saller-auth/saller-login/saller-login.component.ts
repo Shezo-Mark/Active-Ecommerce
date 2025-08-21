@@ -22,6 +22,7 @@ export class SallerLoginComponent {
      this.saller.SallerLoginBck(data.value).subscribe(res =>  {
          if(res && res.length > 0){
           let loginuser={
+            name: res[0].name,
             email:res[0].email,
             password:res[0].password
           }

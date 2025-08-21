@@ -1,1 +1,42 @@
-<button class="btn btn_brand" (click)="Logout()">log out</button>
+<!-- <<button class="btn btn_brand" (click)="Logout()">log out</button>
+<h1>{{this.email}}</h1> -->
+    <main class="Admin_Side">
+          <app-aside></app-aside>
+         <div class="right">
+             <app-header></app-header>
+
+               <div class="Admin_main_box">
+                <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <a href="all-requests.html" class="admin_box">
+                              <h5>Products <span>200</span></h5>
+                              <i class="fa-solid fa-users"></i>
+                          </a>
+                      </div>
+                        <div class="col-md-3">
+                          <a href="mangerlist.html" class="admin_box">
+                              <h5>Orders<span>200</span></h5>
+                              <i class="fa-solid fa-users"></i>
+                          </a>
+                      </div>
+                      <div class="col-md-3">
+                          <a href="cancel-requests.html" class="admin_box">
+                              <h5>Completed Orders<span>200</span></h5>
+                              <i class="fa-solid fa-users"></i>
+                          </a>
+                      </div>
+                      <div class="col-md-3">
+                          <a href="completed-requests.html" class="admin_box">
+                              <h5>Pending Orders<span>200</span></h5>
+                              <i class="fa-solid fa-users"></i>
+                          </a>
+                      </div>
+
+                  </div>
+                  <router-outlet></router-outlet>
+                </div>
+            </div>
+             <app-fotter></app-fotter>
+         </div>
+    </main>

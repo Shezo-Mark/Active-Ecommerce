@@ -1,6 +1,6 @@
 <ul class="categories_list">
-  <li><a href=""><span><img src="../../../assets/images/icons/new-arrival.png" alt=""></span>New Arrivals</a></li>
-  <li><a href=""><span><img src="../../../assets/images/icons/living-room.webp" alt=""></span>Living Room</a></li>
+  <li *ngFor="let catItem of Categories"><a [routerLink]="catItem.route"><span><img [src]="catItem.icon" [alt]="catItem.name"></span>{{catItem.name}}</a></li>
+  <!-- <li><a href=""><span><img src="../../../assets/images/icons/living-room.webp" alt=""></span>Living Room</a></li>
   <li><a href=""><span><img src="../../../assets/images/icons/bedroom.webp" alt=""></span>Bedroom</a></li>
   <li><a href=""><span><img src="../../../assets/images/icons/kitchen.webp" alt=""></span>Kitchen</a></li>
   <li><a href=""><span><img src="../../../assets/images/icons/dining.webp" alt=""></span>Dining</a></li>
@@ -8,5 +8,5 @@
   <li><a href=""><span><img src="../../../assets/images/icons/outdoor-patio.webp" alt=""></span>Outdoor & Patio</a></li>
   <li><a href=""><span><img src="../../../assets/images/icons/small-spaces.webp" alt=""></span>Small Spaces</a></li>
   <li><a href=""><span><img src="../../../assets/images/icons/bathroom.webp" alt=""></span>Bathroom</a></li>
-  <li><a href=""><span><img src="../../../assets/images/icons/baby-kids.webp" alt=""></span>Baby & Kids</a></li>
+  <li><a href=""><span><img src="../../../assets/images/icons/baby-kids.webp" alt=""></span>Baby & Kids</a></li> -->
 </ul>

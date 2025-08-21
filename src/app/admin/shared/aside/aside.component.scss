@@ -1,0 +1,92 @@
+          .left{
+        max-width: 280px;
+        min-width: 280px;
+        height: 100%;
+        padding: 15px 0;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        transition: .5s;
+        z-index: 99;
+        &.is_active{
+            transition: .5s;
+            left: -280px;
+        }
+
+    }
+      aside{
+           .logo{
+            margin-bottom: 1px;
+            display: block;
+           }
+            ul{
+                list-style-type: none;
+                padding-left: 0;
+                li{
+                    padding: 4px 0;
+                    a, .dropdown_link, .dropdown_nav li a{
+                         text-decoration: none;
+                         width: 100%;
+                         display: block;
+                         padding: 10px 20px;
+                         font-size: 17px;
+                         font-weight: bold;
+                         color: white;
+                         cursor: pointer;
+                         i{
+                            font-size: 20px;
+                            margin-right: 10px;
+                         }
+                         &:hover{
+                            background-color: #F2F2F2;
+                            color: black;
+                         }
+                         &.is_active{
+                            background-color: #F2F2F2;
+                            color: black;
+                         }
+                    }
+                    .has_dropdown{
+                        // display: flex;
+                        // width: 100%;
+                        cursor: pointer;
+                        .dropdown_link{
+                            position: relative;
+                            &.is_active{
+                                background-color: #F2F2F2;
+                                color: black;
+                                &:before{
+                                    background-image: url('../../../../assets/images/icons/arrow-down-dark.svg');
+                                }
+                             }
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                                width: 14px;
+                                height: 14px;
+                                background-image: url('../../../../assets/images/icons/arrow-down-white.svg');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            &:hover{
+                               &:before{
+                                background-image: url('../../../../assets/images/icons/arrow-down-dark.svg');
+                               }
+                             }
+                        }
+                        .dropdown_nav{
+                             max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 1s ease;
+                            background-color: #0000001d;
+                            &.is_active{
+                               max-height: 500px;
+                            }
+                        }
+                }
+            }
+        }
+      }

@@ -1,0 +1,58 @@
+.Admin_Side{
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    height: 100vh;
+    .right{
+        width: 100%;
+        position: relative;
+        padding-left: 280px;
+        transition: .5s;
+        &.user_chat{
+            padding-left: 0;
+        }
+        &.is_active{
+            transition: .5s;
+            padding-left: 0;
+        }
+
+        .Admin_main_box{
+            height: calc(100vh - 114px);
+            overflow-y: hidden;
+            .admin_box{
+               display: block;
+               text-decoration: none;
+               padding: 26px;
+               margin-top: 10px;
+               position: relative;
+               background: #baa185;
+               i{
+                position: absolute;
+                top: 10px;
+                right: 0;
+                font-size: 60px;
+                color: rgb(211, 211, 211);
+                opacity: 0.3;
+               }
+            }
+            h5{
+                font-size: 22px;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                z-index: 99;
+                color: white;
+            }
+        }
+    }
+}
+// .is_relative{
+//   position: relative;
+// }
+// .button_bottom_right{
+//   position: absolute;
+// bottom: 0;
+// right: 0;
+// }
+
