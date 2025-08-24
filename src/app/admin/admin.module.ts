@@ -9,7 +9,8 @@ import { FotterComponent } from './shared/fotter/fotter.component';
 import { AsideComponent } from './shared/aside/aside.component';
 import { ProdustsComponent } from './produsts/produsts.component';
 import { AddProductsComponent } from './add-products/add-products.component';
-
+import { NgxEditorModule } from 'ngx-editor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,10 @@ import { AddProductsComponent } from './add-products/add-products.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+        FormsModule,
+    ReactiveFormsModule,
+    NgxEditorModule,
   ]
 })
 export class AdminModule { }

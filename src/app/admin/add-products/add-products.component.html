@@ -26,6 +26,11 @@
                                         <div class="form-group">
                                             <!-- <label for="name">Customer Name</label> -->
                                             <input type="text" class="form-control" id="name"  placeholder="Customer Name">
+                                    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+<ngx-editor [editor]="editor" [(ngModel)]="html" [ngModelOptions]="{standalone: true}"></ngx-editor>
+
+<h4>Preview</h4>
+<div [innerHTML]="html"></div>
                                         </div>
                                     </div>
                                     </div>
@@ -71,7 +76,7 @@
                                     </div>
                                     </div>
                                     </div>
-                                    <div class="text-end"><a href="" type="submit" class="btn btn_brand">Add Record</a></div>
+                                    <div class="text-end"><a type="button" class="btn btn_brand">Add Record</a></div>
                                 </form>
                                </div>
                             </div>
