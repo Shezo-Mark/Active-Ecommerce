@@ -59,14 +59,14 @@
                                           <div class="form-group">
                                             <label for="">Choose Colors</label>
                                               <div class="d-flex align-items-center">
-         <div formArrayName="Colors">
-  <ng-container *ngFor="let color of colors; let i = index">
-    <label>
-      <input type="checkbox" [formControlName]="i" />
-      {{ color.ColorName }}
-    </label>
-  </ng-container>
-</div>
+                                                <div formArrayName="Colors">
+                                                  <ng-container *ngFor="let color of colors; let i = index">
+                                                    <label>
+                                                      <input type="checkbox" [formControlName]="i" />
+                                                      {{ color.ColorName }}
+                                                    </label>
+                                                  </ng-container>
+                                                </div>
                                               </div>
                                           </div>
                                       </div>

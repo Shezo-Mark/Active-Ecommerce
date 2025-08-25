@@ -12,19 +12,17 @@ import { ProductsService } from '../../services/products.service';
 export class AddProductsComponent {
  editor!: Editor;
   html = '';
-colors: any[] = [
-  {ColorName:'Gray',Value:false},
-  {ColorName:'Red',Value:false},
-  {ColorName:'Blue',Value:false},
-  {ColorName:'Green',Value:false}
-];
-
+  colors: any[] = [
+    {ColorName:'Gray',Value:false},
+    {ColorName:'Red',Value:false},
+    {ColorName:'Blue',Value:false},
+    {ColorName:'Green',Value:false}
+  ];
   constructor(public product: ProductsService){
     this.colors.forEach(() => this.colorsFormArray.push(new FormControl(false)));
   }
   ngOnInit() {
     this.editor = new Editor();
-
   }
   toolbar: Toolbar = [
     ['bold', 'italic', 'underline', 'strike'],
@@ -34,7 +32,7 @@ colors: any[] = [
     ['link', 'image'],
     ['text_color', 'background_color'],
     ['align_left', 'align_center', 'align_right', 'align_justify'],
-     ['undo', 'redo'],
+    ['undo', 'redo'],
   ];
   ngOnDestroy() {
     this.editor.destroy();
@@ -49,8 +47,8 @@ colors: any[] = [
      Colors: new FormArray([])
   })
   get colorsFormArray(): FormArray {
-  return this.AddProductForm.get('Colors') as FormArray;
-}
+   return this.AddProductForm.get('Colors') as FormArray;
+  }
   addProducts(){
     if(this.AddProductForm.invalid){
       console.log('data send faild')
@@ -72,5 +70,4 @@ colors: any[] = [
      })
     }
   }
-
 }
