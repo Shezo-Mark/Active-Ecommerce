@@ -3,81 +3,76 @@
                         <div class="col-12">
                             <div class="user_profile_content p-4 box calc-100vh-200 overflowY">
                                 <div class="form max-w-100 box-shadow-none">
-                                 <form action="" class="is_relative">
-                                    <div class="row">
-                                        <div class="form-group image-upload-group d-flex align-items-center">
-                                            <div class="user_info" style="width: fit-content; margin-right: 20px;" >
-                                                <img style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;" src="../assets/images/starter1.jpg" class="mb-2 preview-image" alt="">
-                                             </div>
-                                                    <div class="form-group w-100">
-                                                     <!-- <label for="name" style="margin-left: 0;">Add bill image</label> -->
-                                                    <input type="file" style="border-radius: 5px;" class="form-control image-input" id="name"  placeholder="bill-images">
-                                                </div>
-                                             </div>
-                                     </div>
-                                    <div class="row">
+                                  <form action="" class="is_relative" [formGroup]="AddProductForm" (ngSubmit)="addProducts()">
+                                      <div class="row">
+                                          <div class="form-group image-upload-group d-flex align-items-center">
+                                              <div class="user_info" style="width: fit-content; margin-right: 20px;" >
+                                                  <img style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;" src="../assets/images/starter1.jpg" class="mb-2 preview-image" alt="">
+                                              </div>
+                                                      <div class="form-group w-100">
+                                                      <!-- <label for="name" style="margin-left: 0;">Add bill image</label> -->
+                                                      <input type="file" style="border-radius: 5px;" class="form-control image-input" id="name"  placeholder="bill-images">
+                                                  </div>
+                                              </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-lg-6">
+                                          <div class="form-group">
+                                            <label for="">Product Name</label>
+                                            <input type="text" name="UpdateProductName" class="form-control" formControlName="ProductName" placeholder="Product Name" />
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                      <div class="form-group">
+                                        <label for="">Product Status</label>
+                                          <!-- <label for="name">Select Bill Status</label> -->
+                                          <select class="form-select" name="service" formControlName="ProductStatus">
+                                              <option selected>Product Status</option>
+                                              <option value="In Stock">In Stock</option>
+                                              <option value="Out Of Stock">Out Of Stock</option>
+                                          </select>
+                                      </div>
+                                      </div>
+                                      <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+                                            <ngx-editor formControlName="ProductDescription" [editor]="editor" style="min-height: 300px;"></ngx-editor>
+                                        </div>
+                                        <!-- <h4>Preview</h4>
+                                        <div [innerHTML]="html"></div> -->
+                                      </div>
+                                      </div>
+                                      <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                            <label for="">Product Date</label>
+                                            <input type="date" formControlName="ProductDate" name="UpdateProductDate" class="form-control" placeholder="Product Date" />
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                            <label for="">Product Price</label>
+                                            <input type="text" name="UpdateProductPrice" formControlName="ProductPrice" class="form-control" placeholder="Product Price" />
+                                          </div>
+                                      </div>
                                         <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="Phone">Meter Number</label> -->
-                                            <input type="text" class="form-control" id="Phone"  placeholder="Meter Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="name">Customer Name</label> -->
-                                            <input type="text" class="form-control" id="name"  placeholder="Customer Name">
-                                    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
-<ngx-editor [editor]="editor" [(ngModel)]="html" [ngModelOptions]="{standalone: true}"></ngx-editor>
-
-<h4>Preview</h4>
-<div [innerHTML]="html"></div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="Username">Customer CNIC</label> -->
-                                            <input type="text" class="form-control" id="Username"  placeholder="Customer CNIC">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="Phone">Customer Phone Number</label> -->
-                                            <input type="number" class="form-control" id="Phone"  placeholder="Customer Phone Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="Phone">Customer Address</label> -->
-                                            <input type="text" class="form-control" id="Phone"  placeholder="Customer Address">
-                                        </div>
-                                    </div>
-                                        <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="Phone">Customer Block Number</label> -->
-                                            <input type="text" class="form-control" id="Phone"  placeholder="Customer Block Number">
-                                        </div>
-                                    </div>
-                                        <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <!-- <label for="Phone">Bill payment</label> -->
-                                            <input type="text" class="form-control" id="Phone"  placeholder="Bill Payment">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <!-- <label for="name">Select Bill Status</label> -->
-                                        <select class="form-select" name="service">
-                                            <option selected>Select Bill Status</option>
-                                            <option value="1">Paid</option>
-                                            <option value="2">Pending</option>
-                                        </select>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    <div class="text-end"><a type="button" class="btn btn_brand">Add Record</a></div>
-                                </form>
+                                          <div class="form-group">
+                                            <label for="">Choose Colors</label>
+                                              <div class="d-flex align-items-center">
+         <div formArrayName="Colors">
+  <ng-container *ngFor="let color of colors; let i = index">
+    <label>
+      <input type="checkbox" [formControlName]="i" />
+      {{ color.ColorName }}
+    </label>
+  </ng-container>
+</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="text-end"><button type="submit" class="btn btn_brand">Add Record</button></div>
+                                  </form>
                                </div>
                             </div>
                        </div>

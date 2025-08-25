@@ -443,6 +443,11 @@
     width: 100%;
     border-radius: 5px  !important;
   }
+   input[type="checkbox"]{
+      width: auto !important;
+      margin-right: 15px;
+      margin-left: 2px;
+  }
   .eicon{
      input{
       border-top-right-radius: 0 !important;
